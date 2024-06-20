@@ -6,6 +6,37 @@ public class Employee {
     long esal;
     String department;
 
+    String firstName;
+    String lastName;
+
+    public Employee(int eno,String firstName, String lastName) {
+        this.eno = eno;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Employee(int eno, String ename, long esal) {
+        this.eno = eno;
+        this.ename = ename;
+        this.esal = esal;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public Employee(int eno, String ename, long esal, String department) {
         this.eno = eno;
         this.ename = ename;
@@ -45,13 +76,25 @@ public class Employee {
         this.department = department;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "eno=" + eno +
+//                ", ename=" + ename +
+//                ", esal=" + esal +
+//                ", department=" + department +
+//                '}';
+//    }
+
     @Override
     public String toString() {
         return "Employee{" +
                 "eno=" + eno +
-                ", ename=" + ename +
+                ", ename='" + ename + '\'' +
                 ", esal=" + esal +
-                ", department=" + department +
+                ", department='" + department + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }

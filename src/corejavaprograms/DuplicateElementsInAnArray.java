@@ -53,6 +53,7 @@ public class DuplicateElementsInAnArray {
         List<String> listelements=Arrays.asList(elements);
         Set <String> dupEleCheck=listelements.stream().filter(ele->Collections.frequency(listelements,ele)>1).collect(Collectors.toSet());
         System.out.println("Duplicate Element with Streams are -->" + dupEleCheck);
+
         }
     }
 

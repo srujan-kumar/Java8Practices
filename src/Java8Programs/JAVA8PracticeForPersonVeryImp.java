@@ -1,12 +1,9 @@
 package Java8Programs;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
-public class JAVA8PracticeForPerson {
+public class JAVA8PracticeForPersonVeryImp {
     public static void main(String[] args) {
         List<Persons> listOfPersons=new ArrayList<Persons>();
         listOfPersons.add(new Persons("Rahul",30,"rahulchichha@gmail.com",Gender.MALE));
@@ -24,10 +21,24 @@ public class JAVA8PracticeForPerson {
                 collect(Collectors.groupingBy(p->p.getGender()));
         System.out.println("Group By gender values are"+groupByGender);
 
+        // Group by Gender and Display Person Name
+        Map<String, Set<Persons>> groupByGenderDisplayNames1=listOfPersons.stream().
+                collect(Collectors.groupingBy(p->p.getGender(),Collectors.toSet()));
+        System.out.println("Group By gender Display respective Perosn Details through SET are"+groupByGenderDisplayNames1);
+
+        // Group by Gender and Display Person Name
+        Map<String,List<String>> groupByGenderDisplayNames=listOfPersons.stream().
+                collect(Collectors.groupingBy(p->p.getGender(),Collectors.mapping(Persons::getName,Collectors.toList())));
+        System.out.println("Group By gender Display respective names are"+groupByGenderDisplayNames);
+
+        // Hashtable instead of hashmap
+        Hashtable<String,List<String>> groupByGenderDisplayNames2=listOfPersons.stream().
+                collect(Collectors.groupingBy(p->p.getGender(),Hashtable::new,Collectors.mapping(Persons::getName,Collectors.toList())));
+        System.out.println("Group By gender Display As hashtable is "+groupByGenderDisplayNames2);
+
         //reduce method ****
         Optional<String> names=listOfPersons.stream().map(p->p.getName()).reduce((name1, name2)->name1+", "+name2);
         if(names.isPresent()) { System.out.println(names.get());}
-
 
     }
 }

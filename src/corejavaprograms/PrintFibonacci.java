@@ -7,11 +7,12 @@ public class PrintFibonacci {
         int c = 1;
 
         for (int i = 1; i <= count; i++) {
-            System.out.print(a + ", ");
+           System.out.print(a + ", ");
 
             a = b;
             b = c;
             c = a + b;
+
         }
     }
 

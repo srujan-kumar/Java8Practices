@@ -29,9 +29,12 @@ public class MapAndFlatMap {
         Stream.of("dog", "cat")              // stream of 2 Strings
                 .map(s -> s.length()).collect(Collectors.toList()).forEach(System.out::println);
 
+
         // Simple FlatMap Example
         Stream.of("dog", "cat")
                 .flatMapToInt(s -> s.chars()).forEach(System.out::println); //O/P --> Despite the name, String.chars() method returns ints (actual value of each char). So the actual collection will be: [100, 111, 103, 99, 97, 116]
+
+
 
         // MAP EXAMPLE
         // making the array list object

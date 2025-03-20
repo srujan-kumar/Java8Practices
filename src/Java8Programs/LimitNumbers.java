@@ -12,6 +12,9 @@ public class LimitNumbers {
         int sum=numbers_list.stream().limit(5).reduce((p,q)->p+q).get();
         System.out.println("limitedList --> "+limitedList);
         System.out.println("Sum of limitedList --> "+sum);
+        //numbers_list.stream().limit(5).reduce((p,q)->p+q).get();
+        System.out.println(numbers_list.stream().skip(numbers_list.size()-1).findFirst().get());
+
 
         //skip first five elements
         List<Integer> ListAfterSkip=numbers_list.stream().skip(5).collect(Collectors.toList());

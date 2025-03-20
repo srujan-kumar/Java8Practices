@@ -2,6 +2,7 @@ package Java8Programs;
 
 import java.util.Arrays;
 import java.util.OptionalDouble;
+import java.util.stream.IntStream;
 
 public class AverageOfArrayElements {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class AverageOfArrayElements {
         // Approach2 JAVA8 ***
         Double avg=Arrays.stream(num).average().getAsDouble();
         System.out.println("Avg of array elements"+avg);
+
 
     }
 }

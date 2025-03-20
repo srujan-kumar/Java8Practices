@@ -20,7 +20,7 @@ list.stream().sorted( comparator ).collect();
 
 Note: In this program we had used existing POJO class which was used for
  */
-public class MultipleFieldsSortingInJava8 {
+public class MultipleFieldsSortingInJava8_CustomComparatorImp {
     public static void main(String[] args) {
 
         ArrayList<Employee> employees = getUnsortedEmployeeList();

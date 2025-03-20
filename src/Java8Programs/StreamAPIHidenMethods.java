@@ -1,6 +1,5 @@
 package Java8Programs;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 import static java.util.stream.Collectors.*;
 
 // Ref from https://www.youtube.com/watch?v=xHCWU9Q88rQ
-public class StreamAPIHiidenMethods {
+public class StreamAPIHidenMethods {
     public static void main(String[] args) {
         // Stream.ofNullable
         // Stream.iterate()
@@ -88,18 +87,11 @@ public class StreamAPIHiidenMethods {
         Map<Boolean, List<Integer>> numbersPartitioning=numList.stream().collect(Collectors.partitioningBy(num->num%2==0));
         System.out.println("Even and Odd Numbers Partitioning -->"+numbersPartitioning);
         System.out.println("ODD NUmbers "+numbersPartitioning.get(Boolean.FALSE));
+        System.out.println("EVEN NUmbers "+numbersPartitioning.get(Boolean.TRUE));
 
         // Int Stream for Ranges
         List<Integer> intStream1=IntStream.range(1,20).boxed().collect(Collectors.toList());
         System.out.println("Int Stream Output"+intStream1);
-
-
-
-
-
-
-
-
 
 
     }

@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
-public class Java8PracticeWithMovieClass {
+public class Java8PracticeWithMovieClass_MultipleSortings {
     public static void main(String[] args) {
        List<Movie>movieNames= Arrays.asList(
                new Movie(true,"Bahubali",8.8,2020),
@@ -30,7 +30,9 @@ public class Java8PracticeWithMovieClass {
             System.out.println("Latest Movie"+latestMovie.get());
         }
 
-        Movie mov=movieNames.stream().min((m1,m2)->m1.getReleaseYear()-m2.getReleaseYear()).get();
-        System.out.println("Old Movie fetching in diff way -->"+mov);
+        System.out.println(movieNames.stream().min((m1,m2)->m1.getReleaseYear()-m2.getReleaseYear()).get().toString());
+        //Movie mov=movieNames.stream().min((m1,m2)->m1.getReleaseYear()-m2.getReleaseYear()).get();
+
+        //System.out.println("Old Movie fetching in diff way -->"+mov);
     }
 }

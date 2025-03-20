@@ -2,10 +2,9 @@ package Java8Programs;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class GetFamilyWithGrtThanSixMembersAndincome30K {
+public class GetFamilyWithGrtThanSixMembersAndincome30K_MultipleFiltersIMP {
     // get Family details whose family memebers >6, and income >30K
     public static void main(String[] args) {
         List<Family> familyList=new ArrayList<>();
@@ -24,7 +23,6 @@ public class GetFamilyWithGrtThanSixMembersAndincome30K {
             System.out.println(family.getIncome());
             System.out.println("==============");
         });
-
 
     }
 }

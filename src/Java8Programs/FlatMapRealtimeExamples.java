@@ -62,15 +62,5 @@ public class FlatMapRealtimeExamples {
 
         System.out.println("Max Salary From ALL Dept is "+maxSalFromAllDept);
 
-
-
-
-
-
-
-
-
-
-
     }
 }

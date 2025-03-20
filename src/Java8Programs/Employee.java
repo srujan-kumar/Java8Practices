@@ -21,6 +21,12 @@ public class Employee {
         this.esal = esal;
     }
 
+    public Employee(int eno, String ename) {
+        this.eno = eno;
+        this.ename = ename;
+
+    }
+
     public String getFirstName() {
         return firstName;
     }

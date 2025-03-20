@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class MultipleFiltersAndNegateInJava8 {
+public class MultipleFiltersAndNegateInJava8Imp {
     public static void main(String[] args) {
         List<Integer> numbersList=List.of(0,10,20,30,40,50,60,70,80,90,100);
         // get numbers >40 and <80

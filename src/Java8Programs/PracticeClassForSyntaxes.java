@@ -33,6 +33,11 @@ public class PracticeClassForSyntaxes  {
         emplist1.add(new Employee(7, "Ravi", 50000, "HR"));
         emplist1.add(new Employee(5, "Tarun", 60000, "ACCOUNTS"));
         emplist1.add(new Employee(15, "Suresh", 90000, "MANAGEMENT"));
+
+        Long esal=emplist1.stream().max((e1,e2)->e1.esal>e2.esal?1:e1.esal>e2.esal?-1:0).stream().skip(2).findFirst().get().getEsal();
+
+        System.out.println("Third Highest Sal"+emplist1);
+
         Collections.sort(emplist1,(e1,e2)->(e1.eno>e2.eno)?1:(e1.eno<e2.eno)?-1:0);
 
         System.out.println("Sorted Emp list based on Emploee Num is"+emplist1);
@@ -54,11 +59,6 @@ public class PracticeClassForSyntaxes  {
         duplicateList.add(5);
         List<Integer> duplicateList1=duplicateList.stream().distinct().sorted(Comparator.naturalOrder()).collect(Collectors.toList());
         System.out.println("Duplicate elements remove and sort"+duplicateList1);
-
-
-
-
-
 
         System.out.println("Tree MAP After sorting is"+emplist);
 

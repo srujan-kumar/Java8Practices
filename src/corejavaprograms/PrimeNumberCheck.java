@@ -1,8 +1,11 @@
 package corejavaprograms;
+
+import java.util.stream.IntStream;
+
 public class PrimeNumberCheck {
 
     public static void main(String[] args) {
-        System.out.println(isPrime(19)); // true
+        System.out.println(isPrimeCheck(19)); // true
         System.out.println(isPrime(49)); // false
     }
 
@@ -20,6 +23,10 @@ public class PrimeNumberCheck {
         }
 
         return true;
+    }
+
+    public static boolean isPrimeCheck(int number) {
+        return IntStream.rangeClosed(2, number/2).noneMatch(i -> number%i == 0);
     }
 
 }

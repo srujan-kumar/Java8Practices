@@ -13,7 +13,7 @@ public class ConvertArrayToStreamAndStreamOfMethod {
      //   System.out.println(str.count()); //  *** Count method of Stream Class
         str.forEach(System.out::println);
 
-        // Creating an Stream having single element only
+        // Creating a Stream having single element only
         Stream stream = Stream.of("Geeks");
 
         // Displaying the Stream having single element

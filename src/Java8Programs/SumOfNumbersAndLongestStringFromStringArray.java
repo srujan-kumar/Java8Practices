@@ -3,9 +3,15 @@ package Java8Programs;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.IntStream;
 
-public class SumOfNumbers {
+public class SumOfNumbersAndLongestStringFromStringArray {
     public static void main(String[] args) {
+
+        // sum of first 10 natural numbers
+        System.out.println("sum of first 10 natural numbers"+IntStream.range(1,11).sum());
+
+
         List<Integer> numbers_list= Arrays.asList(1,5,6,9,4,2);
         //
         Optional<Integer> sum=numbers_list.stream().reduce((a,b)->a+b);

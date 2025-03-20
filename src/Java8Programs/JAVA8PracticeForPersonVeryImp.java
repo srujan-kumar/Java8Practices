@@ -26,6 +26,8 @@ public class JAVA8PracticeForPersonVeryImp {
                 collect(Collectors.groupingBy(p->p.getGender(),Collectors.toSet()));
         System.out.println("Group By gender Display respective Perosn Details through SET are"+groupByGenderDisplayNames1);
 
+        Map<String,List<Persons>> gender=listOfPersons.stream().collect(Collectors.groupingBy(p->p.getGender()));
+        System.out.println("Group By gender Display respective names are *****%%%%"+gender);
         // Group by Gender and Display Person Name
         Map<String,List<String>> groupByGenderDisplayNames=listOfPersons.stream().
                 collect(Collectors.groupingBy(p->p.getGender(),Collectors.mapping(Persons::getName,Collectors.toList())));
@@ -39,6 +41,8 @@ public class JAVA8PracticeForPersonVeryImp {
         //reduce method ****
         Optional<String> names=listOfPersons.stream().map(p->p.getName()).reduce((name1, name2)->name1+", "+name2);
         if(names.isPresent()) { System.out.println(names.get());}
+
+       listOfPersons.stream().collect(Collectors.groupingBy(P->P.getGender(),Hashtable::new,Collectors.mapping(Persons::getName,Collectors.toList())));
 
     }
 }

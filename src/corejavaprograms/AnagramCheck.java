@@ -10,7 +10,6 @@ public class AnagramCheck {
         System.out.println(isAnagram("Listen", "Silent"));
         System.out.println(isAnagram("Toss", "Shot"));
         System.out.println(isAnagram("Joy", "Enjoy"));
-
     }
 
     public static boolean isAnagram(String s1, String s2) {
@@ -22,7 +21,6 @@ public class AnagramCheck {
             char c2[] = str2.toLowerCase().toCharArray();
             Arrays.sort(c1);
             Arrays.sort(c2);
-
             return Arrays.equals(c1, c2);
         }
     }

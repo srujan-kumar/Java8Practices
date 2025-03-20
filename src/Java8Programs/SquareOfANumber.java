@@ -14,6 +14,7 @@ public class SquareOfANumber {
                                                 .average()
                                                         .getAsDouble();
 
+
         System.out.println("Capture the Numbers Whose Square is greater than 100 print average of those Numbers Square "+average);
     }
 }

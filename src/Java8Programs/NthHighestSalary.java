@@ -1,6 +1,7 @@
 package Java8Programs;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -21,10 +22,10 @@ public class NthHighestSalary {
         System.out.println(getNthHighestSalary(1,priceMap));
 
     }
-
+    // understand
     public static Map.Entry<String,Integer> getNthHighestSalary(int num, Map<String, Integer> priceMap) {
         return priceMap.entrySet().stream().sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
-                .collect(Collectors.toList())
+                .collect(Collectors.toList())   // ** Collect the sorted entries into a List
                 .get(num);
 
     }
